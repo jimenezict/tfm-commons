@@ -6,4 +6,6 @@ public interface ConsumerService {
 
     public void getStationStatus();
 
+    public String getServiceName();
+
 }
