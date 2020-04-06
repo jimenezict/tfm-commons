@@ -1,9 +1,12 @@
 package com.uoc.tfm.controller;
 
+import com.uoctfm.commons.domain.Stations;
+import com.uoctfm.commons.domain.StationsStatus;
+
 public interface ConsumerController {
 
-    public void getStations();
+    public Stations getStations();
 
-    public void getStationStatus();
+    public StationsStatus getStationStatus();
 
 }
