@@ -1,7 +1,7 @@
 package com.uoc.tfm.service;
 
-import com.uoctfm.commons.domain.Stations;
-import com.uoctfm.commons.domain.StationsStatus;
+import com.uoc.tfm.commons.domain.StationsLocation;
+import com.uoc.tfm.commons.domain.StationsStatus;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -11,14 +11,14 @@ import java.time.LocalDateTime;
 import static java.lang.Math.random;
 
 @Service
-public class ConsumerServiceImpl implements ConsumerService {
+public class ClientServiceImpl implements ClientService {
 
     @Value("${service.name:default}")
     private String serviceName;
 
     @Override
-    public Stations getStations() {
-        Stations stations = new Stations(LocalDate.now());
+    public StationsLocation getStationsLocation() {
+        StationsLocation stations = new StationsLocation(LocalDate.now());
         stations.addStation(1,0,0,"Clot");
         stations.addStation(2,0,0,"SantVi");
         stations.addStation(3,0,0,"Alpens");
